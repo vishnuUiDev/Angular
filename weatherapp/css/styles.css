@@ -1,0 +1,409 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 700px;
+  font-family: 'HelveticaNeue-Light', Helvetica, Arial, Sans-Serif;
+  color: white;
+  background: #555;
+}
+body a {
+  color: white;
+  text-decoration: none;
+}
+body h1,
+body h2,
+body h3,
+body h4 {
+  font-weight: normal;
+  margin: 0px;
+}
+body h1 {
+  font-size: 80px;
+  font-family: 'HelveticaNeue-UltraLight', Helvetica, Arial, Sans-Serif;
+}
+body li {
+  font-size: 16px;
+  line-height: 16px;
+}
+body ul {
+  list-style-type: none;
+  padding: 0;
+  -webkit-padding-start: 0px;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+body #cities-list,
+body #selected-city {
+  display: none;
+}
+body.show-selected-city #cities-list {
+  display: none;
+}
+body.show-selected-city #selected-city {
+  display: block;
+}
+body.show-selected-city nav div.add-button {
+  right: 40px;
+}
+body.show-selected-city section#city-header {
+  position: relative;
+  text-align: center;
+  left: 0px;
+  right: 0px;
+  margin-top: 20px;
+  height: 140px;
+}
+body.show-selected-city section#today {
+  text-align: center;
+  position: relative;
+  left: 0px;
+  right: 0px;
+  margin-top: 10px;
+  height: 120px;
+}
+body.show-selected-city section#today ul.today-overview {
+  text-align: left;
+  position: absolute;
+  height: 25px;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+body.show-selected-city section#today ul.today-overview li {
+  position: relative;
+  float: left;
+  width: 25%;
+}
+body.show-selected-city section#today ul.today-overview li:nth-child(3),
+body.show-selected-city section#today ul.today-overview li:nth-child(4) {
+  text-align: right;
+}
+body.show-selected-city section#today div {
+  position: absolute;
+  height: 94px;
+  top: 26px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  left: 0px;
+  right: 0px;
+}
+body.show-selected-city section#today div ul.today-hourly-list {
+  position: relative;
+  top: 7px;
+  height: 80px;
+}
+body.show-selected-city section#today div ul.today-hourly-list > li {
+  position: relative;
+  float: left;
+  width: 64px;
+  height: 64px;
+}
+body.show-selected-city section#today div ul.today-hourly-list > li li {
+  font-size: 13px;
+  height: 30px;
+}
+body.show-selected-city section#today div ul.today-hourly-list > li img {
+  height: 20px;
+  width: 20px;
+}
+body.show-selected-city section#forecast {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+body.show-selected-city section#forecast ul.forecast-list {
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+body.show-selected-city section#forecast ul.forecast-list li {
+  height: 26px;
+}
+body.show-selected-city section#forecast ul.forecast-list li ul li {
+  position: relative;
+  float: left;
+  width: 25%;
+  line-height: 26px;
+}
+body.show-selected-city section#forecast ul.forecast-list li ul li:nth-child(2) {
+  text-align: right;
+}
+body.show-selected-city section#forecast ul.forecast-list li ul li:nth-child(2) img {
+  margin-top: 5px;
+  height: 20px;
+  width: 20px;
+}
+body.show-selected-city section#forecast ul.forecast-list li ul li:nth-child(3),
+body.show-selected-city section#forecast ul.forecast-list li ul li:nth-child(4) {
+  text-align: right;
+}
+body.show-selected-city section#today-details {
+  position: relative;
+  width: 100%;
+  padding-bottom: 60px;
+}
+body.show-selected-city section#today-details p.today-summary {
+  margin: 0px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+body.show-selected-city section#today-details ul.today-details-list {
+  position: relative;
+  padding-top: 10px;
+  left: 50%;
+  width: 300px;
+  margin-left: -150px;
+}
+body.show-selected-city section#today-details ul.today-details-list li {
+  height: 20px;
+}
+body.show-selected-city section#today-details ul.today-details-list li ul li {
+  position: relative;
+  float: left;
+  width: 140px;
+}
+body.show-selected-city section#today-details ul.today-details-list li ul li:nth-child(1) {
+  text-align: right;
+  padding-right: 5px;
+}
+body.show-selected-city section#today-details ul.today-details-list li ul li:nth-child(2) {
+  padding-left: 5px;
+}
+body.show-selected-city section img {
+  width: 30px;
+  height: 30px;
+}
+body.show-cities-list #selected-city {
+  display: none;
+}
+body.show-cities-list nav {
+  background: #555 !important;
+  border-top: 1px solid #444;
+}
+body.show-cities-list #cities-list {
+  display: block;
+}
+body.show-cities-list #cities-list ul {
+  position: relative;
+}
+body.show-cities-list #cities-list ul li {
+  height: 84px;
+}
+body.show-cities-list #cities-list ul li ul li {
+  position: absolute;
+  height: 84px;
+}
+body.show-cities-list #cities-list ul li ul li img {
+  margin-top: 9px;
+  width: 50px;
+  padding-left: 5px;
+}
+body.show-cities-list #cities-list ul li ul li.city-info {
+  left: 0px;
+  right: 100px;
+}
+body.show-cities-list #cities-list ul li ul li.city-info div {
+  padding-left: 16px;
+}
+body.show-cities-list #cities-list ul li ul li.city-info div.time {
+  margin-top: 19px;
+  font-size: 15px;
+}
+body.show-cities-list #cities-list ul li ul li.city-info div.city-name {
+  margin-top: 11px;
+  font-size: 30px;
+}
+body.show-cities-list #cities-list ul li ul li.temperature {
+  right: 20px;
+  width: 100px;
+  text-align: right;
+  line-height: 84px;
+  font-size: 65px;
+  font-family: 'HelveticaNeue-UltraLight', Helvetica, Arial, Sans-Serif;
+}
+.is-night {
+  background-color: #141830;
+  background: -webkit-gradient(linear, left top, left bottom, from(#141830), to(#262c43));
+  background: -webkit-linear-gradient(top, #141830, #262c43);
+  background: -moz-linear-gradient(top, #141830, #262c43);
+  background: -ms-linear-gradient(top, #141830, #262c43);
+  background: -o-linear-gradient(top, #141830, #262c43);
+}
+.is-night ul.today-overview,
+.is-night section#today,
+.is-night section#forecast,
+.is-night p.today-summary {
+  border-bottom: 1px solid #8d8f9a;
+}
+.is-night#today-details,
+.is-night nav {
+  border-top: 1px solid #8d8f9a;
+}
+.is-night ul.today-overview li:nth-child(2),
+.is-night ul.today-overview li:nth-child(4) {
+  color: #8d8f9a;
+}
+.is-night.is-cloudy {
+  background-color: #0b131e;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0b131e), to(#232931));
+  background: -webkit-linear-gradient(top, #0b131e, #232931);
+  background: -moz-linear-gradient(top, #0b131e, #232931);
+  background: -ms-linear-gradient(top, #0b131e, #232931);
+  background: -o-linear-gradient(top, #0b131e, #232931);
+}
+.is-night.is-cloudy ul.today-overview,
+.is-night.is-cloudy section#today,
+.is-night.is-cloudy section#forecast,
+.is-night.is-cloudy p.today-summary {
+  border-bottom: 1px solid #8b8f92;
+}
+.is-night.is-cloudy#today-details,
+.is-night.is-cloudy nav {
+  border-top: 1px solid #8b8f92;
+}
+.is-night.is-cloudy ul.today-overview li:nth-child(2),
+.is-night.is-cloudy ul.today-overview li:nth-child(4) {
+  color: #8b8f92;
+}
+.is-day {
+  background-color: #2f76a1;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2f76a1), to(#549dc5));
+  background: -webkit-linear-gradient(top, #2f76a1, #549dc5);
+  background: -moz-linear-gradient(top, #2f76a1, #549dc5);
+  background: -ms-linear-gradient(top, #2f76a1, #549dc5);
+  background: -o-linear-gradient(top, #2f76a1, #549dc5);
+}
+.is-day ul.today-overview,
+.is-day section#today,
+.is-day section#forecast,
+.is-day p.today-summary {
+  border-bottom: 1px solid #a1c8df;
+}
+.is-day#today-details,
+.is-day nav {
+  border-top: 1px solid #a1c8df;
+}
+.is-day ul.today-overview li:nth-child(2),
+.is-day ul.today-overview li:nth-child(4) {
+  color: #a1c8df;
+}
+.is-day.is-cloudy {
+  background-color: #718291;
+  background: -webkit-gradient(linear, left top, left bottom, from(#718291), to(#617588));
+  background: -webkit-linear-gradient(top, #718291, #617588);
+  background: -moz-linear-gradient(top, #718291, #617588);
+  background: -ms-linear-gradient(top, #718291, #617588);
+  background: -o-linear-gradient(top, #718291, #617588);
+}
+.is-day.is-cloudy ul.today-overview,
+.is-day.is-cloudy section#today,
+.is-day.is-cloudy section#forecast,
+.is-day.is-cloudy p.today-summary {
+  border-bottom: 1px solid #b6c0c9;
+}
+.is-day.is-cloudy#today-details,
+.is-day.is-cloudy nav {
+  border-top: 1px solid #b6c0c9;
+}
+.is-day.is-cloudy ul.today-overview li:nth-child(2),
+.is-day.is-cloudy ul.today-overview li:nth-child(4) {
+  color: #b6c0c9;
+}
+nav {
+  position: fixed;
+  height: 42px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+}
+nav.is-night {
+  background: #262c43;
+}
+nav.is-night.is-cloudy {
+  background: #232931;
+}
+nav.is-day {
+  background: #2f76a1;
+}
+nav.is-day.is-cloudy {
+  background: #617588;
+}
+nav a.attribution {
+  position: absolute;
+  right: 10px;
+  color: #aaa;
+  font-size: 14px;
+  line-height: 41px;
+}
+nav div {
+  position: absolute;
+  font-size: 25px;
+  height: 42px;
+}
+nav div.disabled {
+  opacity: 0.5;
+}
+nav div.add-button {
+  right: 10px;
+  top: 8px;
+  height: 20px;
+  width: 20px;
+  border: 1px solid white;
+  border-radius: 11px;
+  line-height: 16px;
+  text-align: center;
+  font-size: 22px;
+}
+nav div.celsius-or-fahrenheit {
+  font-size: 18px;
+  width: 55px;
+  left: 10px;
+  line-height: 38px;
+}
+nav div.celsius-or-fahrenheit span {
+  opacity: 0.6;
+  font-family: 'HelveticaNeue-Bold';
+}
+nav div.celsius-or-fahrenheit.use-celsius span.celsius,
+nav div.celsius-or-fahrenheit.use-fahrenheit span.fahrenheit {
+  opacity: 0.9;
+}
+nav div.next-prev-nav {
+  width: 120px;
+  left: 50%;
+  margin-left: -60px;
+  padding-top: 10px;
+  opacity: 0.9;
+}
+nav div.next-prev-nav div {
+  font-size: 14px;
+}
+nav div.next-prev-nav .prev-button {
+  left: 0px;
+  width: 20px;
+}
+nav div.next-prev-nav .indicator-dots {
+  left: 30px;
+  right: 30px;
+  text-align: center;
+}
+nav div.next-prev-nav .indicator-dots span {
+  opacity: 0.5;
+}
+nav div.next-prev-nav .indicator-dots span.current {
+  opacity: 1;
+}
+nav div.next-prev-nav .next-button {
+  right: 0px;
+  width: 20px;
+  text-align: right;
+}
+nav div.list-button {
+  right: 0px;
+  width: 30px;
+}
