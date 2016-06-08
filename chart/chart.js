@@ -23,7 +23,7 @@ angular.module('AngularChart', []).directive('chart', function () {
                     x:-20
                 },
                 xAxis:{
-                    //categories:['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun','Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    
                     tickInterval:1,
                     title:{
                         text:attrs.xname
@@ -39,14 +39,6 @@ angular.module('AngularChart', []).directive('chart', function () {
                     tickInterval:(attrs.yinterval)?new Number(attrs.yinterval):null,
                     max:attrs.ymax,
                     min: attrs.ymin
-//                    ,
-//                    plotLines:[
-//                        {
-//                            value:0,
-//                            width:1,
-//                            color:'#808080'
-//                        }
-//                    ]
                 },
                 tooltip:{
                     formatter:scope[attrs.formatter]||function () {
@@ -68,8 +60,6 @@ angular.module('AngularChart', []).directive('chart', function () {
                     }
                 ]
             }
-
-
             //Update when charts data changes
             scope.$watch(function (scope) {
                 return JSON.stringify({
@@ -80,7 +70,7 @@ angular.module('AngularChart', []).directive('chart', function () {
                 });
             }, function (news) {
                 console.log('ola')
-//                if (!attrs) return;
+
                 news = JSON.parse(news)
                 if (!news.series)return;
                 angular.extend(opt,news)
